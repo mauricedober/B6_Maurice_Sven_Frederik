@@ -1,1 +1,8 @@
 /* CSS Code, den es nur für Start Page braucht */
+.hero {
+    background: #f1f3f5; /* Soft gray */
+  }
+  .card img {
+    object-fit: cover;
+    height: 250px;
+  }
