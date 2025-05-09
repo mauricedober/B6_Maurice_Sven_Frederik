@@ -1,1 +1,95 @@
+<?<php>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaffeekraftwerk</title>
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar navbar-expand-md navbar-light d-print-none">
+    <div class="container-xl">
+      <a class="navbar-brand" href="#"><img src="logo.svg" alt="Logo" height="32" /></a>
+      <div class="navbar-nav flex-row order-md-last">
+        <a href="#" class="nav-link">Produkte</a>
+        <a href="#" class="nav-link">Gewinnspiel</a>
+        <a href="#" class="nav-link">Über uns</a>
+        <a href="#" class="nav-link">Warenkorb</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <!-- Hero Section -->
+    <section class="hero py-6 bg-secondary-lt text-center text-white">
+      <div class="container">
+        <h1 class="display-3 fw-bold">Kaffee.<br>Handwerk.<br>Leidenschaft.</h1>
+        <a href="#" class="btn btn-outline-dark mt-3">Sortiment entdecken →</a>
+      </div>
+    </section>
+
+    <!-- Bestseller -->
+    <section class="container py-6">
+      <h2 class="mb-4">Bestseller</h2>
+      <div class="row g-3">
+        <?php for ($i = 0; $i < 3; $i++): ?>
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img src="placeholder.jpg" class="card-img-top" alt="Produkt">
+            <div class="card-body">
+              <h3 class="card-title">Produktname</h3>
+              <span class="badge bg-secondary">Herkunftsland</span>
+              <span class="badge bg-secondary">Aroma</span>
+            </div>
+          </div>
+        </div>
+        <?php endfor; ?>
+      </div>
+    </section>
+
+    <!-- Über uns -->
+    <section class="container py-5">
+      <h2>Über unseren Shop</h2>
+      <p>Fugiat minim incididunt aliquip ut est aliquip deserunt anim nisi eu sit id id.</p>
+      <p>Magna commodo non voluptate quis esse consectetur elit deserunt adipisicing id...</p>
+    </section>
+
+    <!-- Gewinnspiel -->
+    <section class="container py-5">
+      <h2>Gewinnspiel</h2>
+      <p>Magna commodo non voluptate quis esse consectetur elit deserunt adipisicing id...</p>
+      <div class="card p-4 mt-3 text-center">
+        <div class="text-xxl fw-bold mb-2"><span id="gewinn">5</span> %</div>
+        <div class="h3 mb-3">Rabatt</div>
+        <input type="email" class="form-control mb-3" placeholder="E-Mail adresse" />
+        <button class="btn btn-dark" onclick="drehen()">Einmal drehen</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer-transparent">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-6 col-md">
+          <img src="logo.svg" alt="Logo" height="32">
+        </div>
+        <div class="col-6 col-md">
+          <h4>Menu</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Produkte</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Gewinnspiel</a></li>
+            <li><a href="#">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+</php>
