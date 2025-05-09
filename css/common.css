@@ -1,11 +1,4 @@
 /* CSS Code, der für alle Web Pages gleich ist und auf allen Web Pages eingebunden werden muss. */
-.hero {
-    background: #f1f3f5; /* Soft gray */
-  }
-  .card img {
-    object-fit: cover;
-    height: 250px;
-  }
   footer {
     padding: 2rem 0;
     background: #f8f9fa;
