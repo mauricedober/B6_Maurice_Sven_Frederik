@@ -6,3 +6,25 @@
         background-size: cover;
         background-position: center;
       }
+
+.product-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        background-color: #e9ecef;
+        border: 1px solid #ccc;
+      }
+
+      .filter-bar {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .card-title {
+        font-weight: 700;
+      }
+
+      .product-card .badge {
+        margin-right: 0.5rem;
+      }
