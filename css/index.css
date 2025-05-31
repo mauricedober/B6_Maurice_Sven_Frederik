@@ -1,6 +1,6 @@
 /* Hero-Bereich mit Hintergrundfarbe */
     .hero {
-    background-image: url(../B6_Maurice_Sven_Frederik/media/hero.jpeg);
+    background-image: url(../media/hero.jpeg);
     padding: 4rem 2rem;
     text-align: left;
     }
