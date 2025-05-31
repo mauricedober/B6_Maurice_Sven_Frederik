@@ -1,0 +1,8 @@
+.product-image {
+        background-color: #e9ecef;
+        width: 40%;
+        aspect-ratio: 1 / 1;
+        border: 1px solid #ccc;
+        background-size: cover;
+        background-position: center;
+      }

@@ -1,0 +1,58 @@
+/* Hero-Bereich mit Hintergrundfarbe */
+    .hero {
+    background-image: url(../media/hero.jpeg);
+    padding: 4rem 2rem;
+    text-align: left;
+    }
+
+    /* Produktkarten: Platzhalter für Bild */
+    .product-card img {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-sand);
+    aspect-ratio: 1/1;
+    }
+
+    /* Gewinnspielbox mit Kontrast und Rahmen */
+    .promo-box {
+    border: 2px solid var(--color-espresso);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff;
+    }
+
+    .promo-box input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    }
+
+    .machine {
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.reel {
+    background: #222;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.spin {
+    animation: spin 0.5s infinite;
+}
+@keyframes spin {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(360deg); }
+}
+.result {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    color: #00e676;
+} 

@@ -1,0 +1,38 @@
+:root {
+        --color-light-foam: #f4f1ee;
+        --color-crema: #d7b899;
+        --color-cappuccino: #b88a58;
+        --color-espresso: #6e3b24;
+        --color-dark-roast: #3e1e14;
+
+        --tblr-body-bg: var(--color-light-foam);
+        --tblr-primary: var(--color-cappuccino);
+        --tblr-secondary: var(--color-crema);
+        --tblr-dark: var(--color-dark-roast);
+        --tblr-muted: var(--color-espresso);
+      }
+
+      body {
+        background-color: var(--tblr-body-bg);
+      }
+
+      /* Navbar Code*/
+      .navbar-brand img{
+        height: 7vh;
+      }
+
+      .navbar {
+        position: sticky;
+        top: 0px;
+      }
+
+      /* Footer optisch abheben */
+      footer {
+        background: var(--color-beige);
+        padding: 2rem;
+        border-top: 1px solid var(--color-sand);
+      }
+
+      footer img{
+        height: 7vh;
+      }
