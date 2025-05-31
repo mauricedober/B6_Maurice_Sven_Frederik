@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de" style="margin-left: 0px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaffee Shop</title>
+    <link href="https://unpkg.com/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light">
+      <div class="container-xl">
+        <a href="index.html" class="navbar-brand"><img src="../media/logo.svg"></a>
+        <div class="navbar-nav flex-row ms-auto">
+          <a class="nav-link" href="products.html">Produkte</a>
+          <a class="nav-link" href="index.html#gewinnspiel">Gewinnspiel</a>
+          <a class="nav-link" href="index.html#ueber-uns">Über uns</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container-xl">
+        <h1 class="display-4 fw-bold text-light">Kaffee.<br />Handwerk.<br />Leidenschaft.</h1>
+        <a href="products.html" class="btn btn-light mt-3 text-dark">Sortiment entdecken →</a>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container-xl">
+        <h2 class="mb-4">Bestseller</h2>
+        <div class="row g-4">
+          <div class="col-sm-6 col-md-4">
+            <a href="/products/costa-rica-cerro-azul.html" class="card product-card shadow-sm text-reset text-decoration-none">
+              <img src="/media/product-images/01_CerroAzul.jpeg" alt="Costa Rica Cerro Azul" class="w-100" />
+              <div class="card-body">
+                <h3 class="card-title">Costa Rica Cerro Azul</h3>
+                <span class="badge bg-secondary text-light">Costa Rica</span>
+                <span class="badge bg-secondary text-light">rote Beeren, Zitrus</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="/products/ethiopia-ardi.html" class="card product-card shadow-sm text-reset text-decoration-none">
+              <img src="/media/product-images/02_EthiopiaARDI.jpeg" alt="Ethiopia ARDI" class="w-100" />
+              <div class="card-body">
+                <h3 class="card-title">Ethiopia ARDI</h3>
+                <span class="badge bg-secondary text-light">Äthiopien</span>
+                <span class="badge bg-secondary text-light">blumig, elegant</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="/products/brazil-dark-ground.html" class="card product-card shadow-sm text-reset text-decoration-none">
+              <img src="/media/product-images/06_BrazilDarkGround.jpeg" alt="Brazil Dark Ground" class="w-100" />
+              <div class="card-body">
+                <h3 class="card-title">Brazil Dark Ground</h3>
+                <span class="badge bg-secondary text-light">Brasilien</span>
+                <span class="badge bg-secondary text-light">Kakao, geröstete Nüsse</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 text-center">
+            <a href="/products.html" class="btn btn-primary">Mehr anzeigen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container-xl">
+        <h2 id="ueber-uns">Über unseren Shop</h2>
+        <p>Unser Herz schlägt für Kaffee – und das seit über 15 Jahren.</p>
+        <p>Wir beziehen unsere Bohnen direkt von Kleinbauern aus nachhaltigem Anbau und rösten sie in kleinen Chargen, um das Beste aus jedem Ursprung herauszuholen. Qualität, Transparenz und Leidenschaft stehen bei uns an erster Stelle.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h1 class="card-title text-center mb-4" id="gewinnspiel">Dreh & Gewinne 🎰</h1>
+            <form id="entryForm" class="mb-3">
+              <div class="mb-3 row">
+                <div class="col">
+                  <input type="text" id="firstname" class="form-control" placeholder="Vorname" required>
+                </div>
+                <div class="col">
+                  <input type="text" id="lastname" class="form-control" placeholder="Nachname" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="email" id="email" class="form-control" placeholder="Deine E-Mail" required>
+              </div>
+              <div class="mb-3">
+                <input type="tel" id="phone" class="form-control" placeholder="Telefonnummer" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" id="location" class="form-control" placeholder="Wohngemeinde, PLZ" required>
+              </div>
+              <div class="mb-3">
+                <input type="date" id="dob" class="form-control" placeholder="Geburtsdatum" required>
+              </div>
+              <div class="d-grid">
+                <button type="button" class="btn btn-primary" onclick="startSpin()">Jetzt drehen!</button>
+              </div>
+            </form>
+            <div class="machine mb-3">
+              <div id="reel1" class="reel">❓</div>
+              <div id="reel2" class="reel">❓</div>
+              <div id="reel3" class="reel">❓</div>
+            </div>
+            <div id="result" class="result text-center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    </section>
+
+    <footer>
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <img src="../media/logo.svg">
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Menu</h5>
+            <ul class="list-unstyled">
+              <li><a href="products.html">Produkte</a></li>
+              <li><a href="index.html#ueber-uns">Über uns</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3">
+            <ul class="list-unstyled">
+              <li><a href="index.html#gewinnspiel">Gewinnspiel</a></li>
+              <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/@tabler/core@latest/dist/js/tabler.min.js"></script>
+    <script src="/js/databaseClient.js"></script>
+    <!-- Script für Gewinnspiel -->
+    <script src="/js/slot.js"></script>
+  </body>
+</html>

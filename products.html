@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de" style="margin-left: 0px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaffee Shop</title>
+    <link href="https://unpkg.com/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet" />
+    <style>
+      /* Farbvariablen gemäß gewünschtem Farbschema */
+      :root {
+        --color-light-foam: #f4f1ee;    /* Milchschaum */
+        --color-crema: #d7b899;         /* Crema-Ton */
+        --color-cappuccino: #b88a58;    /* Cappuccino-Braun */
+        --color-espresso: #6e3b24;      /* Espresso */
+        --color-dark-roast: #3e1e14;    /* Dunkel gerösteter Kaffee */
+
+        /* Default Theme Override */
+        --tblr-body-bg: var(--color-light-foam);
+        --tblr-primary: var(--color-cappuccino);
+        --tblr-secondary: var(--color-crema);
+        --tblr-dark: var(--color-dark-roast);
+        --tblr-muted: var(--color-espresso);
+      }
+
+       body {
+        background-color: var(--tblr-body-bg);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        background-color: #e9ecef;
+        border: 1px solid #ccc;
+      }
+
+      .filter-bar {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .card-title {
+        font-weight: 700;
+      }
+
+      .product-card .badge {
+        margin-right: 0.5rem;
+      }
+      /* Navbar Code*/
+      .navbar-brand img{
+        height: 7vh;
+      }
+
+      /* Footer optisch abheben */
+      footer {
+        background: var(--color-beige);
+        padding: 2rem;
+        border-top: 1px solid var(--color-sand);
+      }
+
+      footer img{
+        height: 7vh;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light">
+      <div class="container-xl">
+        <a href="index.html" class="navbar-brand"><img src="../media/logo.svg"></a>
+        <div class="navbar-nav flex-row ms-auto">
+          <a class="nav-link" href="products.html">Produkte</a>
+          <a class="nav-link" href="index.html#gewinnspiel">Gewinnspiel</a>
+          <a class="nav-link" href="index.html#ueber-uns">Über uns</a>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="py-5">
+      <div class="container-xl">
+        <h1 class="mb-4 fw-bold">Unser wohl geröstetes Sortiment bester Kaffeebohnen</h1>
+
+        <div class="d-flex filter-bar mb-4">
+          <select class="form-select w-auto">
+            <option selected>Röstgrad Filter</option>
+            <option value="2">2 - Hell</option>
+            <option value="3">3 - Mittel</option>
+            <option value="4">4 - Mittelkräftig</option>
+            <option value="5">5 - Dunkel</option>
+          </select>
+          <select class="form-select w-auto">
+            <option selected>Herkunftsland Filter</option>
+            <option value="Äthiopien">Äthiopien</option>
+            <option value="Kolumbien">Kolumbien</option>
+            <option value="Brasilien">Brasilien</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Sumatra">Sumatra</option>
+            <option value="Panama">Panama</option>
+            <option value="Indonesien, Brasilien & Vietnam">Indonesien, Brasilien & Vietnam</option>
+            <option value="Kolumbien, Brasilien & Guatemala">Kolumbien, Brasilien & Guatemala</option>
+          </select>
+          <select class="form-select w-auto">
+            <option selected>Sortierung</option>
+            <option>Preis aufsteigend</option>
+            <option>Preis absteigend</option>
+          </select>
+        </div>
+
+        <div class="row g-4" id="product-list">
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Costa Rica" data-roast="3" data-price="18">
+    <a href="/products/costa-rica-cerro-azul.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/01_CerroAzul.jpeg" alt="Costa Rica Cerro Azul" />
+      <div class="card-body">
+        <h3 class="card-title">Costa Rica Cerro Azul</h3>
+        <span class="badge bg-secondary text-light">Costa Rica</span>
+        <span class="badge bg-secondary text-light">rote Beeren, Zitrus</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Äthiopien" data-roast="4" data-price="18">
+    <a href="/products/ethiopia-ardi.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/02_EthiopiaARDI.jpeg" alt="Ethiopia ARDI" />
+      <div class="card-body">
+        <h3 class="card-title">Ethiopia ARDI</h3>
+        <span class="badge bg-secondary text-light">Äthiopien</span>
+        <span class="badge bg-secondary text-light">blumig, elegant</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Guatemala" data-roast="4" data-price="18">
+    <a href="/products/guatemala-blue-ayarza.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/03_GuatemalaBlueAyarza.jpeg" alt="Guatemala Blue Ayarza" />
+      <div class="card-body">
+        <h3 class="card-title">Guatemala Blue Ayarza</h3>
+        <span class="badge bg-secondary text-light">Guatemala</span>
+        <span class="badge bg-secondary text-light">nussig, rund</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Äthiopien" data-roast="2" data-price="20">
+    <a href="/products/ethiopia-aricha.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/04_EthiopiaAricha.jpeg" alt="Ethiopia Aricha" />
+      <div class="card-body">
+        <h3 class="card-title">Ethiopia Aricha</h3>
+        <span class="badge bg-secondary text-light">Äthiopien</span>
+        <span class="badge bg-secondary text-light">Jasmin, Aprikose</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Sumatra" data-roast="5" data-price="18">
+    <a href="/products/sumatra-jagong-mill.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/05_SumatraJagongMill.jpeg" alt="Sumatra Jagong Mill" />
+      <div class="card-body">
+        <h3 class="card-title">Sumatra Jagong Mill</h3>
+        <span class="badge bg-secondary text-light">Sumatra</span>
+        <span class="badge bg-secondary text-light">Schokolade, Tabak</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Brasilien" data-roast="5" data-price="18.99">
+    <a href="/products/brazil-dark-ground.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/06_BrazilDarkGround.jpeg" alt="Brazil Dark Ground" />
+      <div class="card-body">
+        <h3 class="card-title">Brazil Dark Ground</h3>
+        <span class="badge bg-secondary text-light">Brasilien</span>
+        <span class="badge bg-secondary text-light">Kakao, geröstete Nüsse</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Guatemala" data-roast="3" data-price="19.99">
+    <a href="/products/organic-guatemala.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/07_OrganicGuatemala.jpeg" alt="Organic Guatemala" />
+      <div class="card-body">
+        <h3 class="card-title">Organic Guatemala</h3>
+        <span class="badge bg-secondary text-light">Guatemala</span>
+        <span class="badge bg-secondary text-light">nussig, weich</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Kolumbien" data-roast="3" data-price="17.50">
+    <a href="/products/colombian-excelso.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/08_ColombiaExcelso.jpeg" alt="Colombian Excelso" />
+      <div class="card-body">
+        <h3 class="card-title">Colombian Excelso</h3>
+        <span class="badge bg-secondary text-light">Kolumbien</span>
+        <span class="badge bg-secondary text-light">harmonisch, nussig</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Panama" data-roast="2" data-price="38">
+    <a href="/products/panama-boquete-geisha.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/09_PanamaBoqueteGeisha.jpeg" alt="Panama Boquete Geisha" />
+      <div class="card-body">
+        <h3 class="card-title">Panama Boquete Geisha</h3>
+        <span class="badge bg-secondary text-light">Panama</span>
+        <span class="badge bg-secondary text-light">floral, Zitrus</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Kolumbien, Brasilien & Guatemala" data-roast="3" data-price="24.95">
+    <a href="/products/harmony-blend.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/10_HarmonyBlend.jpeg" alt="Harmony Blend" />
+      <div class="card-body">
+        <h3 class="card-title">Harmony Blend</h3>
+        <span class="badge bg-secondary text-light">Kolumbien, Brasilien & Guatemala</span>
+        <span class="badge bg-secondary text-light">nussig, mild</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Indonesien, Brasilien & Vietnam" data-roast="5" data-price="16">
+    <a href="/products/midnight-espresso.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/11_MidnightEspresso.jpeg" alt="Midnight Espresso" />
+      <div class="card-body">
+        <h3 class="card-title">Midnight Espresso</h3>
+        <span class="badge bg-secondary text-light">Indonesien, Brasilien & Vietnam</span>
+        <span class="badge bg-secondary text-light">Beeren, Karamell</span>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4" data-origin="Kenia" data-roast="4" data-price="19.99">
+    <a href="/products/kenyan-aa.html" class="card product-card shadow-sm text-reset text-decoration-none">
+      <img src="/media/product-images/12_KenyanAA.jpeg" alt="Kenyan AA" />
+      <div class="card-body">
+        <h3 class="card-title">Kenyan AA</h3>
+        <span class="badge bg-secondary text-light">Kenia</span>
+        <span class="badge bg-secondary text-light">Johannisbeeren, komplex</span>
+      </div>
+    </a>
+  </div>
+</div>
+      </div>
+    </main>
+
+    <footer class="mt-5 border-top">
+      <div class="container-xl py-4">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../media/logo.svg" height="40">
+          </div>
+          <div class="col-md-3">
+            <h5>Menu</h5>
+            <ul class="list-unstyled">
+              <li><a href="products.html">Produkte</a></li>
+              <li><a href="index.html#ueber-uns">Über uns</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="list-unstyled">
+              <li><a href="index.html#gewinnspiel">Gewinnspiel</a></li>
+              <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/@tabler/core@latest/dist/js/tabler.min.js"></script>
+    <script src="/js/sort.js"></script>
+  </body>
+</html>
