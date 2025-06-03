@@ -1,9 +1,31 @@
-/* Hero-Bereich mit Hintergrundfarbe */
-    .hero {
-    background-image: url(../media/hero.jpeg);
-    padding: 4rem 2rem;
-    text-align: left;
-    }
+/* Hero-Bereich mit Hintergrundvideo */
+   .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
 
     /* Produktkarten: Platzhalter für Bild */
     .product-card img {
